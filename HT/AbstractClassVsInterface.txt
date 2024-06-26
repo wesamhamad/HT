@@ -1,0 +1,29 @@
+1. Abstract Class vs. Interface 
+Question: 
+a.	What is the main difference between an abstract class and an interface in PHP? 
+
+| Abstract Class                          |Interface |
+| Contains declaration and implementation   | Contains only declaration part          |
+| Allows multiple inheritance               | Allows multiple inheritance             |
+| Contains Constructor                      | Does not contain constructor            |
+| vs static members                         | Does not allow static members           |
+| Contains public access modifier           | Only contains public access modifier    |
+| Performance of an abstract class is fast  | The performance of an interface is slow |
+| Contain: methods and fields               | Can contain: methods only               |
+| Be fully, partially or not implemented    | It should be fully implemented          |
+| 1st choice when you are sure some methods are required/defined and must be implemented in the way in all derived classes. | Good choice when you know a method has to be there, but it can be implemented DIFFERENTLY by independent derived classes. |
+
+
+b.	Provide an example of a scenario where you would prefer to use an abstract class over an interface.
+
+Example:
+Developing an app with a built-in user management system.
+Everyone, from regular users to admins, can sign in and update their profiles.
+But admins have additional capabilities like managing user permissions and accessing administrative reports.
+
+
+
+Solution using an Abstract Class:
+An abstract class proves ideal here. It enables us to capture (encapsulate) the common functionalities (login, profile update) shared by both user types. At the same time, it enforces the implementation of specific behaviors (permission management) by the Admin class.
+
+
